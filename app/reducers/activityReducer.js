@@ -1,5 +1,5 @@
 /**
- * detailReducer.js
+ * activityReducer.js
  */
 
 import * as actions from "../actions/action-types";
@@ -7,7 +7,7 @@ import {RefreshState} from "../components/RefreshListView";
 import constants from '../resources/constants';
 import {removeItemFromList} from '../utils/tools';
 
-export default function dataReducer(state, action = {}) {
+export default function activityReducer(state, action = {}) {
   switch (action.type) {
     case actions.DATAS_REFRESHING:
       return state.withMutations(state => state

@@ -7,7 +7,6 @@ import * as actions from "../actions/action-types";
 import * as Api from "../api/AuthApi";
 import * as authActions from "../actions/auth-actions";
 import * as rootActions from "../actions/root-actions";
-import {LOGIN_ACTION} from "../actions/action-types";
 
 function* authorize( action ) {
 

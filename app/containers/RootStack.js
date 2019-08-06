@@ -6,15 +6,15 @@ import React, {Component} from "react";
 import { Image, Text, Platform } from 'react-native';
 import {createStackNavigator, createAppContainer, createBottomTabNavigator} from 'react-navigation';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import FormStack from "./form/FormStack";
+import CourseStack from "./course/CourseStack";
 import ChartStack from "./chart/ChartStack";
 import SettingsStack from "./settings/SettingsStack";
 import colors from '../resources/colors'
 
 const TAB_CONFIG = {
-  FormStack: {
-    label: '表单',
-    icon: 'md-list',
+  CourseStack: {
+    label: '课程',
+    icon: 'md-clipboard',
   },
   ChartStack: {
     label: '图表',
@@ -27,7 +27,7 @@ const TAB_CONFIG = {
 };
 
 const Routes = {
-  FormStack:FormStack,
+  CourseStack:CourseStack,
   ChartStack:ChartStack,
   SettingsStack: SettingsStack,
 };
@@ -73,7 +73,7 @@ const RootStack = createBottomTabNavigator(Routes, {
       },
     });
   },
-  initialRouteName: 'FormStack',
+  initialRouteName: 'CourseStack',
   headerMode: 'screen'
 });
 

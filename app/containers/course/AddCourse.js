@@ -25,12 +25,12 @@ import ImagePickerViewer from "../../components/ImagePickerViewer";
 import IntroDivider from '../../components/IntroDivider';
 import constants from '../../resources/constants';
 import Button from '../../components/Button';
-import * as DataActions from "../../actions/data-actions";
+import * as DataActions from "../../actions/course-actions";
 import Toast from "react-native-root-toast";
 
 const typeActionSheet = [strings.cancel,constants.TYPE_1,constants.TYPE_2,constants.TYPE_3,constants.TYPE_4];
 
-export class AddData extends Component {
+export class AddCourse extends Component {
 
   constructor(props) {
     super(props);
@@ -190,7 +190,6 @@ export class AddData extends Component {
 const mapStateToProps = (state) => ({
     auth: state.get('auth'),
     root: state.get('root'),
-    data: state.get('data'),
 });
 
-export default connect(mapStateToProps)(AddData)
+export default connect(mapStateToProps)(AddCourse)

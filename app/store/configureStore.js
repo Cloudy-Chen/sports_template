@@ -15,8 +15,8 @@ import saveSubsetFilter from '../utils/saveSubsetFilter'
 
 import authReducer from "../reducers/authReducer";
 import rootReducer from "../reducers/rootReducer";
-import dataReducer from "../reducers/dataReducer";
-import chartReducer from "../reducers/chartReducer";
+import courseReducer from "../reducers/courseReducer";
+import activityReducer from "../reducers/activityReducer";
 
 import { rootSaga } from './saga';
 import {RefreshState} from "../components/RefreshListView";
@@ -25,8 +25,8 @@ import constants from '../resources/constants';
 const combinedReducers = combineReducers({
   root: rootReducer,
   auth: authReducer,
-  data: dataReducer,
-  chart: chartReducer
+  course: courseReducer,
+  activity: activityReducer,
 });
 
 const initialState = new Immutable.Map({
@@ -41,14 +41,19 @@ const initialState = new Immutable.Map({
     password: '',
     sessionId: '',
   }),
-  data: Immutable.Map({
-    data: {},
-    datas: [],
+  course: Immutable.Map({
+    course: {},
+    courseList: [],
     refreshState: RefreshState.Idle,
     datasError: false,
     dataResponse: constants.INITIAL,
   }),
-  chart: Immutable.Map({
+  activity: Immutable.Map({
+    activity: {},
+    activityList: [],
+    refreshState: RefreshState.Idle,
+    datasError: false,
+    dataResponse: constants.INITIAL,
   })
 });
 
@@ -63,10 +68,10 @@ export default function configureStore() {
       store,
       {
         storage: AsyncStorage,
-        whitelist: ['auth','data'],
+        whitelist: ['auth','course','activity'],
         transforms: [
             // 白名单 whitelist 中需要save的值
-          saveSubsetFilter(['username','password','sessionId','isLoggedIn'])
+          saveSubsetFilter(['username','password','sessionId','activityList','courseList'])
         ],
       }
   );

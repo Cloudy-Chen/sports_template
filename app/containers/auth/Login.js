@@ -9,7 +9,6 @@ import * as loginActions from "../../actions/auth-actions";
 import * as rootActions from "../../actions/root-actions";
 import FloatingTextInput from "../../components/FloatingTextInput";
 import colors from '../../resources/colors';
-import dimens from '../../resources/dimens';
 import strings from '../../resources/strings';
 import {isEmptyObject, isObject} from '../../utils/tools'
 import {SpinnerWrapper} from '../../components/SpinnerLoading/index'
@@ -48,7 +47,7 @@ export class Login extends Component {
             alert(loginError.message);
             this.props.dispatch(loginActions.setLoginError({}))
         } else if (isLoggedIn) {
-            this.props.navigation.navigate('RootStack'); //自动登录
+            this.props.navigation.navigate('RootStack');
         }
     }
 

@@ -3,16 +3,11 @@
  */
 
 import React, {Component} from "react";
-import {Image, StatusBar, Text, View, TouchableOpacity, TextInput, ImageBackground} from "react-native";
+import {Text, View, TouchableOpacity,ImageBackground} from "react-native";
 import {connect} from "react-redux";
-import * as loginActions from "../../actions/auth-actions";
-import * as rootActions from "../../actions/root-actions";
 import FloatingTextInput from "../../components/FloatingTextInput";
 import colors from '../../resources/colors';
-import dimens from '../../resources/dimens';
 import strings from '../../resources/strings';
-import {isEmptyObject, isObject} from '../../utils/tools'
-import {SpinnerWrapper} from "../../components/SpinnerLoading";
 
 const backgroundImg = require('../../assets/img/app_background_img.jpg');
 

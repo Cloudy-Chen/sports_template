@@ -2,20 +2,14 @@
  * DataListItem.js
  */
 
-// 组件
 import React, { Component, Fragment } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View, Dimensions,} from 'react-native';
 import {SwipeRow} from "react-native-swipe-list-view";
 
-// 工具
 import colors from "../resources/colors";
 import strings from "../resources/strings";
 import {isEmptyObject, isObject, SCREEN_WIDTH} from "../utils/tools";
 
-// actions
-// redux
-// 导航
-// 常量
 var {height, width} = Dimensions.get('window');
 
 class DataListItem extends Component {

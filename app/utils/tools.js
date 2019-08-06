@@ -177,3 +177,34 @@ export function addMember(list,item) {
   list = [...list,item];
   return list;
 }
+
+export function changeSportsType(sportsType) {
+  var sportsTypeStr = '';
+  switch (sportsType){
+    case 0:sportsTypeStr='羽毛球';break;
+    case 1:sportsTypeStr='足球';break;
+    case 2:sportsTypeStr='乒乓球';break;
+    case 3:sportsTypeStr='篮球';break;
+  }
+  return sportsTypeStr;
+}
+
+export function changeClassType(courseGrade) {
+  var classTypeStr = '';
+  switch (courseGrade){
+    case 1:classTypeStr='初级班';break;
+    case 2:classTypeStr='中级班';break;
+    case 3:classTypeStr='高级班';break;
+  }
+  return classTypeStr;
+}
+
+export function changeCostType(costType) {
+  var costTypeStr = '';
+  switch (costType){
+    case '1':costTypeStr='按人支付';break;
+    case '2':costTypeStr='按小时支付';break;
+    case '3':costTypeStr='按班支付';break;
+  }
+  return costTypeStr;
+}

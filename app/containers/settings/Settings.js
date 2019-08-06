@@ -8,7 +8,7 @@ import {connect} from "react-redux";
 import {Toolbar} from "../../components/Toolbar";
 import {ListItem, Icon, } from "react-native-elements";
 import * as authActions from "../../actions/auth-actions";
-import * as dataActions from "../../actions/data-actions";
+import * as dataActions from "../../actions/course-actions";
 import settings from '../../test/settings';
 import colors from '../../resources/colors';
 
